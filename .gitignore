@@ -1,0 +1,8 @@
+.venv/
+*.tmp
+*.xlsx
+*.pass
+*.conf
+*.key
+*.crt
+secretnoe/
