@@ -1,0 +1,33 @@
+stages:
+  - run_first
+  - run_second
+  - run_coffee
+
+watch_ip:
+  stage: run_first
+  tags:
+    - work_on_linux
+  script:
+    - ip a
+
+run_python_app_first:
+  stage: run_first
+  tags:
+    - work_on_linux
+  script:
+    - python3 first.py
+
+run_python_app_second:
+  stage: run_second
+  tags:
+    - work_on_linux
+  script:
+    - python3 second.py
+
+run_python_app_coffee:
+  stage: run_coffee
+  tags:
+    - work_on_linux
+  script:
+    - python3 coffee.py
+
